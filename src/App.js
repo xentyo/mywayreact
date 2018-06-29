@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import logo from './logo.svg';
 import './App.css';
 
@@ -22,12 +23,19 @@ class App extends Component {
     });
   };
   login(event){
-    var request = new XMLHttpRequest();
-    request.open('POST', 'http://myway-api.herokuapp.com/api/users/login', true);
-    request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-    request.send({
-      email: this.state.email,
-      password: this.state.password
+    axios({
+      method: 'post',
+      url: 'http://myway-api.herokuapp.com/api/users/login',
+      data: {
+        email: this.state.email,
+       password: this.state.password
+      }
+    })
+    .then(res => {
+      console.log(res);
+    })
+    .catch(res => {
+      console.log(res);    
     });
     event.preventDefault();
   };
@@ -39,7 +47,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload. {this.state.email}, {this.state.password}
+          To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <form onSubmit={this.login}>
           <label>
