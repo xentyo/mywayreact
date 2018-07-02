@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import logo from './logo.svg';
 import './App.css';
-import { Form, FormGroup, Label, Input } from "reactstrap";
+import { Form, FormGroup, Input, Button, Container } from "reactstrap";
 
 class App extends Component {
   constructor(props) {
@@ -50,28 +50,28 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <h1>Crear cuenta</h1>
-        <Form onSubmit={this.login}>
-          <FormGroup>
-            <Label>Email: </Label>
-            <Input 
-              name="email"
-              type="email"
-              placeholder="Correo electronico"
-              value={this.state.email}
-              onChange={this.handleInputChange} />
-          </FormGroup>
-          <FormGroup>  
-            <Label>Password: </Label>
-            <Input 
-              name="password"
-              type="password"
-              placeholder="Contrasena"
-              value={this.state.password}
-              onChange={this.handleInputChange} />
-          </FormGroup>
-          <Input type="submit" value="Login" />
-        </Form>
+        <Container>
+          <h1>Crear cuenta</h1>
+          <Form onSubmit={this.login}>
+            <FormGroup>
+              <Input 
+                name="email"
+                type="email"
+                placeholder="Correo electronico"
+                value={this.state.email}
+                onChange={this.handleInputChange} />
+            </FormGroup>
+            <FormGroup>
+              <Input 
+                name="password"
+                type="password"
+                placeholder="Contrasena"
+                value={this.state.password}
+                onChange={this.handleInputChange} />
+            </FormGroup>
+            <Button color="primary" type="submit" >Entrar</Button>
+          </Form>
+        </Container>
       </div>
     );
   }
