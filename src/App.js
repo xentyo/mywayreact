@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import logo from './logo.svg';
 import './App.css';
+import { Form, FormGroup, Label, Input } from "reactstrap";
 
 class App extends Component {
   constructor(props) {
@@ -49,25 +50,28 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <form onSubmit={this.login}>
-          <label>
-            Email: 
-            <input 
-            name="email"
-            type="text"
-            value={this.state.email}
-            onChange={this.handleInputChange} />
-          </label>
-          <label>
-            Password: 
-            <input 
-            name="password"
-            type="password"
-            value={this.state.password}
-            onChange={this.handleInputChange} />
-          </label>
-          <input type="submit" value="Login" />
-        </form>
+        <h1>Crear cuenta</h1>
+        <Form onSubmit={this.login}>
+          <FormGroup>
+            <Label>Email: </Label>
+            <Input 
+              name="email"
+              type="email"
+              placeholder="Correo electronico"
+              value={this.state.email}
+              onChange={this.handleInputChange} />
+          </FormGroup>
+          <FormGroup>  
+            <Label>Password: </Label>
+            <Input 
+              name="password"
+              type="password"
+              placeholder="Contrasena"
+              value={this.state.password}
+              onChange={this.handleInputChange} />
+          </FormGroup>
+          <Input type="submit" value="Login" />
+        </Form>
       </div>
     );
   }
