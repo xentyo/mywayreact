@@ -1,8 +1,15 @@
+//Dependencies
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+//import './global/css/App.css'
 import axios from 'axios';
-import logo from './logo.svg';
 
-class App extends Component {
+
+
+class index extends Component {
+  static propTypes = {
+    body: PropTypes.object.isRequired
+  };
   constructor(props) {
     super(props);
     this.state = {
@@ -39,12 +46,14 @@ class App extends Component {
     event.preventDefault();
   };
   render() {
+    const { body } = this.props;
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+      <div className="index">
+           {body}
+           <div className="App-header">
           <h1 className="App-title">Welcome to React</h1>
-        </header>
+        </div>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
@@ -67,9 +76,11 @@ class App extends Component {
           </label>
           <input type="submit" value="Login" />
         </form>
+       
       </div>
+      
     );
   }
 }
 
-export default App;
+export default index;

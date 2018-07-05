@@ -1,10 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+
+//routes
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Sign from './Components/Sign';
 import registerServiceWorker from './registerServiceWorker';
+import AppRoutes from './routes';
 
-
-ReactDOM.render(<Sign />, document.getElementById('root'));
+render(
+    <Router>
+        <AppRoutes />
+    </Router>,
+    document.getElementById('root'));
 registerServiceWorker();

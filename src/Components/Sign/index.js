@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './global/css/App.css';
+//import './Components/global/css/App.css';
 import { Button, Form, FormGroup, Input, Container, Row } from 'reactstrap';
 
 
-class Sign extends Component {
+class index extends Component {
   constructor(props) {
     super (props);
     this.state = {
@@ -51,6 +51,7 @@ class Sign extends Component {
   };
     render(){
         return (
+          <div className="index">
         <Container>
           <Form onSubmit={this.sign}>
             <FormGroup >
@@ -93,9 +94,10 @@ class Sign extends Component {
            </div>
          </Form>
        </Container>
+       </div>
           );
         }
       }
 
 
-export default Sign;
+export default index;
