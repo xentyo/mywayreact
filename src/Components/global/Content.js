@@ -3,13 +3,16 @@ import PropTypes from 'prop-types';
 import './css/App.css'
 
 
-
 class Content extends Component {
+  static propTypes = {
+    body: PropTypes.object.isRequired
+  };
     render() {
-       
+      const { body } = this.props;
         return(
            <div className="Content">
-          <h1 align="center">About</h1>
+           {body}
+           <p align="center">Footer - Copyright .... </p>
            </div>
         );
   }

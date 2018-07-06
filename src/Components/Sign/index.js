@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Button, Form, FormGroup, Input, Container, Row } from 'reactstrap';
 
 
-class index extends Component {
+class Sign extends Component {
   constructor(props) {
     super (props);
     this.state = {
@@ -51,7 +51,7 @@ class index extends Component {
   };
     render(){
         return (
-          <div className="index">
+          <div className="Sign">
         <Container>
           <Form onSubmit={this.sign}>
             <FormGroup >
@@ -100,4 +100,4 @@ class index extends Component {
       }
 
 
-export default index;
+export default Sign;
