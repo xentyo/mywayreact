@@ -1,18 +1,10 @@
-import React, { Component } from "react";
-import axios from "axios";
-import logo from "./logo.svg";
-import "./App.css";
-import {
-  Form,
-  FormGroup,
-  Input,
-  Button,
-  Container,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  ModalFooter
-} from "reactstrap";
+//Dependencies
+import React, { Component } from 'react';
+//import PropTypes from 'prop-types';
+//import './global/css/App.css';
+import axios from 'axios';
+//import logo from "./logo.svg";
+import { Form, FormGroup, Input, Button, Container, Modal, ModalHeader, ModalBody, ModalFooter} from "reactstrap";
 
 class App extends Component {
   constructor(props) {
@@ -69,7 +61,6 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <Container>
