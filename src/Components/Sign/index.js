@@ -3,6 +3,8 @@ import axios from 'axios';
 //import './Components/global/css/App.css';
 import { Button, Form, FormGroup, Input, Container, Row } from 'reactstrap';
 
+//import Navbar from './global/Navbar';
+ 
 
 class Sign extends Component {
   constructor(props) {

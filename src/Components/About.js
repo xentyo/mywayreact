@@ -2,7 +2,9 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 //Components
-import Content from './global/Content';
+import Footer from './global/Footer';
+import Navbar from './global/Navbar';
+
 
 class About extends Component {
     static propTypes = {
@@ -12,7 +14,9 @@ class About extends Component {
         const { children } = this.props;
         return (
             <div className="About">
-            <Content body={children}/>
+            <Navbar/>
+            <Footer body={children}/>
+            
             </div>
         );
     }
