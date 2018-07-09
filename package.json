@@ -7,7 +7,10 @@
     "bootstrap": "^4.1.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+<<<<<<< HEAD
     "react-router-dom": "^4.3.1",
+=======
+>>>>>>> development
     "react-scripts": "1.1.4",
     "reactstrap": "^6.2.0"
   },
@@ -15,6 +18,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "test-mocha": "mocha",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "enzyme": "^3.3.0",
+    "mocha": "^5.2.0"
   }
 }

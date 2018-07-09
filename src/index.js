@@ -4,11 +4,15 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 //Routes
 import registerServiceWorker from './registerServiceWorker';
+<<<<<<< HEAD
 import AppRoutes from './routes';
 
 //Assets
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+=======
+import 'bootstrap/dist/css/bootstrap.min.css'
+>>>>>>> development
 
 render(
     <Router>
