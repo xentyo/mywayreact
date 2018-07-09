@@ -25,7 +25,9 @@ class Map extends Component {
 
   loadPosition = async () => {
     try {
-      const position = await this.getCurrentPosition();
+      const position = await this.getCurrentPosition({
+        enableHighAccuracy: true
+      });
       const latitude = position.coords.latitude;
       const longitude = position.coords.longitude;
       console.log(position);
